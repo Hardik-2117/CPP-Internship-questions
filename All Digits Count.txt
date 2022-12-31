@@ -1,0 +1,7 @@
+All Digit Count: -
+{
+if (input1/10==0)
+    return 1;
+    return 1 + allDigitsCount(input1/10);
+    
+}

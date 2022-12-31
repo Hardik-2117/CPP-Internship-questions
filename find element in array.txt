@@ -1,0 +1,35 @@
+find element in array:-
+
+#include <iostream>
+using namespace std;
+   
+int main(){
+    int input[100], n, i, num;
+       
+    cout << "Enter the size of  Array: ";
+    cin >> n;
+     
+    cout << "Enter the elements of array \n";
+      
+    // Read array elements
+    for(i = 0; i < n; i++){
+        cin >> input[i];
+    }
+      
+    cout << "Enter the element search : ";
+    cin >> num;
+      
+    
+    for(i = 0; i < n; i++){
+        if(input[i] == num){
+            cout << "Element "<<num <<" is found at index " << i;
+            break;
+        }
+    }
+      
+    if(i == n){
+        cout  << "!!!Element not Found!!!\n";
+    }
+ 
+    return 0;
+}

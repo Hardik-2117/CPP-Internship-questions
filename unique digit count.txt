@@ -1,0 +1,16 @@
+unique digits count:-
+int arr[10] = {0};
+    while(input1>0)
+    {
+        int r = input1%10;
+        arr[r]++;
+        input1 /=10;
+
+    }
+    int c = 0;
+    for (int i = 0; i<10; i++){
+        if(arr[i]!=0)
+        c++;
+    }
+    return c;
+}

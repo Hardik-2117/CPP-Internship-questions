@@ -1,0 +1,380 @@
+// 1 program to converts second into hrs mins secs
+
+#include <iostream>
+
+using namespace std;
+
+int main()
+{
+    int seconds, hours, minutes;
+    cout<<"Enter the time in seconds:";
+cin >> seconds;
+minutes = seconds / 60;
+hours = minutes / 60;
+cout <<"time is "<<int(hours)<< " hrs "<<int(minutes%60)<<" mins "<<int(seconds%60)<<" secs ";
+}
+-------------------------------------------------------------------------------------
+//2 add 1 to each digit:-
+
+#include <iostream>
+
+using namespace std;
+int main()
+{
+    int num, sum, remainder, check; 
+    sum = check = 0;
+
+    cout<<"Enter a number:";
+    cin>>num;
+
+    while (num > 0)
+    {
+        remainder = num % 10; 
+
+        if (remainder != 9)
+        {
+            if (check == 0)
+                sum = (10 * sum) + (remainder + 1);
+            else
+            {
+                sum = (10 * sum) + (remainder + 1);
+                check = 0;
+            }
+        }
+        else
+        {
+            sum = (10 * sum) + 0;
+            check = 1;
+        }
+        num /= 10; 
+    }
+
+    num = sum; 
+    sum = 0;
+
+    
+    while (num > 0)
+    {
+        remainder = num % 10;
+        sum = (10 * sum) + remainder;
+        num /= 10;
+    }
+
+   cout<<"New Number by adding one to each digit is : "<<sum;
+    return 0;
+}
+
+
+-------------------------------------------------------------------------------------
+
+//3 Cashier problem 
+
+#include <iostream>
+
+using namespace std;
+int main()
+{
+int amount;
+  
+       
+    cout<<"Enter amount to be withdrawn:";
+    cin>>amount;
+   
+    
+    cout<<"Cashier give you 1000 currency notes of "<<( amount / 100)<<"\n";
+    cout<<"OR\n";
+   
+   
+    cout<<"200 currency notes of "<<(amount/200)<<"\n";
+     cout<<"OR\n";
+
+   
+   cout<<"100 currency notes of "<<(amount/100);
+    return 0;
+}
+
+
+-------------------------------------------------------------------------------------
+
+
+//4 negative or positive no
+
+#include <iostream>
+
+using namespace std;
+int main()
+{
+int number;
+cout<<"Enter a number : ";
+cin>>number;
+if(number>0)
+{cout<<number<<" is a positive number ";}
+else
+{if(number<0){
+    cout<<number<<" is a negative number";}
+    else
+{cout<<number<<" is neither negative or positive";}
+    
+}
+return 0;
+}
+
+-------------------------------------------------------------------------------------
+
+// 5 Reverse of a number
+
+#include <iostream>
+
+using namespace std;
+int main()
+{
+int number;
+int dig ;
+int rev = 0;
+cout<<"Enter the no. to reverse: ";
+cin>>number;
+while(number!=0)
+{
+    dig=number%10;
+    rev=rev*10+dig;
+    number/=10;
+}
+
+cout<<"Reverse of entered number is : "<<rev;
+}
+
+-------------------------------------------------------------------------------------
+
+//6 divisible no.
+
+#include <iostream>
+
+using namespace std;
+int countDivisibles(int A, int B, int M)
+{
+    
+    int counter = 0;
+ 
+    for (int i = A; i <= B; i++)
+        if (i % M == 0)
+            counter++;
+ 
+    return counter;
+}
+ 
+
+int main()
+{int l , r , k;
+cout<<"enter value of l ";
+cin>>l;
+cout<<"\n enter value of r ";
+cin>>r;
+cout<<"\n enter value of k ";
+cin>>k;
+    
+    
+ 
+    
+    cout << countDivisibles(l, r, k) << endl;
+ 
+    return 0;
+}
+
+-------------------------------------------------------------------------------------
+// 7 prime or not
+
+#include <iostream>
+#include <math.h>
+using namespace std;
+ 
+int main()
+{
+    int n, i, flag = 1;
+ 
+    
+    cout <<"Enter a number: \n";
+ 
+    
+    cin >> n ;
+ 
+   
+    for (i = 2; i <= n/2; i++) {
+ 
+        
+        if (n % i == 0) {
+            flag = 0;
+            break;
+        }
+    }
+ 
+    if (n <=1)
+        flag = 0;
+
+ 
+    if (flag == 1) {
+        cout << n <<" is a prime number";
+    }
+    else {
+        cout << n <<" is not a prime number";
+    }
+
+ 
+    return 0;
+}
+-------------------------------------------------------------------------------------
+//8 palindrome or not
+
+#include <iostream>
+
+using namespace std;
+int main()
+{
+int number;
+int dig ;
+int rev = 0;
+cout<<"If input number is : ";
+cin>>number;
+int temp = number;
+while(number!=0)
+{
+    dig=number%10;
+    rev=rev*10+dig;
+    number/=10;
+}
+
+if(temp==rev){
+    cout<< temp <<" is a palindrome ";
+}
+else
+{cout<< temp <<" is not a palindrome";
+}
+}
+
+-------------------------------------------------------------------------------------
+//9 sum of digits
+
+#include <iostream>
+
+using namespace std;
+int main()
+{
+int number;
+int sum= 0;
+int rev = 0;
+cout<<" Input number is : ";
+cin>>number;
+int temp = number;
+while(number!=0)
+{
+    sum=sum+number%10;
+    
+    number/=10;
+}
+
+cout<<"the sum of digits of "<<temp <<" is "<<sum;
+}
+
+-------------------------------------------------------------------------------------
+
+// 10 factorial of number using do while
+
+#include <iostream>
+
+using namespace std;
+int main()
+{ int n,i=1,f=1;
+    
+     
+    cout<<" Enter a number : ";
+    cin>>n;
+     
+    
+    do
+    {
+        f=f*i;
+        i++;
+    }
+    while(i<=n);
+     
+    cout<<" The factorial of "<<n<<" is "<<f;
+    
+}
+
+-------------------------------------------------------------------------------------
+// 11 pattern problem 
+
+#include <iostream>
+
+using namespace std;
+int main()
+
+
+
+{
+    int j, n;
+    int k;
+
+    cout <<"Enter number of rows: ";
+    cin >> n;
+
+    for(int i = 1, k = 0; i <= n; ++i, k = 0)
+    {
+        for(j = 1; j <= n-i; ++j)
+        {
+            cout <<"  ";
+        }
+    while(k != 2*i-1)
+        {
+            cout << "* ";
+            ++k;
+        }
+        cout << endl;
+    }    
+    return 0;
+}
+
+------------------------------------------------------------------------------------
+//12 pattern 2 using number and character
+
+#include <iostream>
+using namespace std;
+ 
+
+int pypart2(int n,char *ch)
+{
+    int i = 0, j = 0, k = 0;
+    while (i<= n) {
+       
+        // for spacing
+        while (k <= n - i - 1) {
+            cout << " ";
+            k++;
+        }
+        k = 0;
+       
+          
+        while (j < 2 * i-1 ) {
+            cout <<ch;
+            j++;
+        }
+        j = 0;
+        i++;
+        cout << endl;
+    }
+    return 0;
+}
+ 
+
+int main()
+{  char ch;
+    int n ;
+    cout<<"enter no. of rows: ";
+    cin>>n;
+    cout<<"\nenter character : ";
+    cin>>ch;
+   
+      
+    pypart2(n,&ch);
+    return 0;
+}
+

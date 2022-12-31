@@ -1,0 +1,55 @@
+1. Complete the following tasks.
+
+1. Create a new directory called PJP [user5@UnixRLLServer -]$ mkdir PJP
+
+2. Move to the directory PJP (i.e. change directory to PJP) [user5@UnixRLLServer -]$ cd PJP
+
+[user5@UnixRLLServer PJP]$
+
+3. Display the present working directory [user5@UnixRLLServer PJP]$ pwd /home/user5/PJP
+
+4. Create a new file called john.dat [user5@UnixRLLServer PJP]$ touch john.dat
+
+5. List all the files and directories [user5@UnixRLLServer -]$ ls
+
+-------------------------------------------------------------------------------------
+
+2. Create the following files in the PJP directpry that has already been created in the above exercise:
+
+prog1.c, prog2.c, app1.c, app2.c, app12.c, app11.c [Hint: use the touch command for creating these files]
+
+[user5@UnixRLLServer -]$ touch prog1.c, prog2.c, app1.c, app2.c, app12.c, app11.c
+
+Perform the following operations -
+
+1. Display long list of all the files with the extension .c in the current
+
+directory 1 [user5@UnixRLLServer -]$ ls -1.c
+
+2. List all the files in the current directory whose filename starts with app [user5@UnixRLLServer -]$ ls -1 app*
+
+3. Long list all the files whose filename starts with app and the 4th & 5th letters are either 1 or 2
+
+[user5@UnixRLLServer -]$ ls app[12] [12]*
+
+4. List all the files whose filename starts with prog, and length of the filename is 7
+
+[user5@UnixRLLServer -]$ ls prog???
+
+5. Remove (delete) all the .c files in the current directory [user5@UnixRLLServer -]$ rm *.c
+
+6. Remove (delete) the Directory PJP [user5@UnixRLLServer -]$ rmdir PJP
+
+-------------------------------------------------------------------------------------
+
+3. Complete the below tasks using the vi editor.
+
+1. Create a new file called welcome.dat and enter the below text.
+
+Hello, Welcome to Unix C++ Sys PBL. This course is teaching me Unix Essential commands.
+
+[user5@UnixRLLServer -]$ vi welcome.dat. Hello, Welcome to Unix C++ Sys PB1.
+
+I must practice the vi editor commands to become comfortable with the environment. I am practicing file and directory related commands. This course is teaching me Unix essential commands. I must practice the vi editor commands to become comfortable with the
+
+environment. I am practicing file and directory related commands.

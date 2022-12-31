@@ -1,0 +1,190 @@
+Library Functions
+Library function are the built-in functions. Programmers can use library functions by invoking the function directly. They don’t need to write the function by themselves.
+Eg: sqrt(), abs(), isdigit()…..
+In order to use library functions, we usually need to include the header file, in which these library functions are defined.
+For instance, in order to use mathematical functions such as sqrt() and abs() we need to include the header file cmath.
+Example
+#include <iostream>
+#include <cmath>
+using namespace std;
+int main()
+{
+    double number, squareRoot;
+    number = 25.0;
+    squareRoot = sqrt(number);
+    cout<<"Square root of " << number << " is " << squareRoot;
+    return 0;
+}
+User defined function Types
+For better understanding of arguments and return in functions, user-defined
+from T V S Koushik to everyone:    11:05 AM
+functions can be categorized as:
+•    Functions with no arguments and no return value
+•    Function with no argument but return value
+•    Function with argument but no return value
+•    Function with argument and return value
+Example-1: No arguments and no return value
+#include <iostream>
+using namespace std;
+void prime();
+int main()
+{
+    prime();
+    return 0;
+}
+void prime()
+{
+    int num, i, flag=0;
+    cout << "Enter a positive integer: ";
+    cin >> num;
+    for(i=2;i<=num/2; i++)
+    {
+        if(num % i == 0)
+        {
+            flag = 1;
+            break;
+        }
+    }
+    if(flag == 1)
+    {
+        cout << num << " is not a prime number.";
+    }
+    else
+    {
+        cout << num << " is a prime number.";
+    }
+}
+
+
+
+
+Example-2: No arguments passed but a return value
+#include <iostream>
+using namespace std;
+int prime();
+int main()
+{
+    int result = prime();
+    cout << "result is : " << result << endl;
+    return 0;
+}
+int prime()
+{
+    int num, i, flag=0;
+    cout << "Enter a positive integer: ";
+    cin >> num;
+    for(i=2;i<=num/2; i++)
+    {
+        if(num % i == 0)
+        {
+            flag = 1;
+            break;
+        }
+    }
+    if(flag == 1)
+    {
+        return -1; // return -1 if not a prime number;
+    }
+    else
+    {
+        return num; // return same number if it is prime.
+    }
+}
+from T V S Koushik to everyone:    11:07 AM
+Example-3: Arguments passed but no return value
+#include <iostream>
+using namespace std;
+void prime(int n);
+int main()
+{
+    int num;
+    cout << "Enter a positive integer to check: ";
+    cin >> num;
+    prime(num);
+    return 0;
+}
+void prime(int n)
+{
+    int i, flag=0;
+    for(i=2;i<=n/2; i++)
+    {
+        if(n % i == 0)
+        {
+            flag = 1;
+            break;
+        }
+    }
+    if(flag == 1)
+    {
+        cout << n << " is not a prime number";
+    }
+    else
+    {
+        cout << n << " is a prime number";
+    }
+}
+from T V S Koushik to everyone:    11:07 AM
+Example-4 : Arguments passed and a return value
+#include <iostream>
+using namespace std;
+int prime(int n);
+int main()
+{
+    int num;
+    cout << "Enter a positive integer to check: ";
+    cin >> num;
+    int result = prime(num);
+    cout << "result is : " << result << endl;
+    return 0;
+}
+int prime(int n)
+{
+    int i, flag=0;
+    for(i=2;i<=n/2; i++)
+    {
+        if(n % i == 0)
+        {
+            flag = 1;
+            break;
+        }
+    }
+    if(flag == 1)
+    {
+        return -1;    
+    }
+    else
+    {
+        return n;
+    }
+}
+from T V S Koushik to everyone:    11:07 AM
+Function Overloading
+In C++, 2 functions can have the same name if the number and  type of arguments passed is different.
+Functions having the same name but different arguments are known as overloaded functions.
+Example :
+Int test() { }
+Int test (int a) { }
+Float test(double a) { }
+Int test (int a, int b) { }
+Double test (int b) { } // Error
+Example-1
+#include <iostream>
+using namespace std;
+float absolute(float var)
+{
+    if (var < 0.0)
+        var = -var;
+    return var;
+}
+int absolute(int var)
+{
+    if (var < 0.0)
+        var = -var;
+    return var;
+}
+int main()
+{
+    cout << "Absolute value of -5 = " << absolute(-5) << endl; // call function with int type parameter
+    cout << "Absolute value of 5.5 = " << absolute(5.5f) << endl; // calls function with float parameter
+    return 0;
+}

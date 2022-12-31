@@ -1,0 +1,69 @@
+C++ code with respect to usage of if(),else.......
+
+CODE-
+
+#include <iostream>
+using std::cin;
+using std::cout;
+using std::endl;
+
+int main()
+{
+    int age;
+    cout<<"Enter your age : ";
+    cin>>age;
+    if (age>18)
+    {
+        cout<<"you are eligible to vote!!!"<<endl;
+    }
+    else
+    {
+        cout<<"sorry, you are not eligible to vote!!!"<<endl;
+    }
+    return 0;
+}
+
+OUTPUT -
+Enter your age - 25
+you are eligible to vote!!!
+
+Enter your age - 12
+sorry, you are not eligible to vote!!!
+
+
+C++ code with respect to usage of #if,#else,#endif -
+
+CODE-
+
+#include <iostream>
+using std::cin;
+using std::cout;
+using std::endl;
+
+int main()
+{
+    int age;
+    cout<<"Enter your age : ";
+    cin>>age;
+    #if (age>18)
+    {
+        cout<<"you are eligible to vote!!!"<<endl;
+    }
+    #else
+    {
+        cout<<"sorry, you are not eligible to vote!!!"<<endl;
+    }
+    #endif
+}
+
+
+OUTPUT - 
+
+Enter your age - 25
+sorry, you are not eligible to vote!!!
+
+Enter your age - 12
+sorry, you are not eligible to vote!!!
+
+
+So main the difference with respect to usage of if()...else.. and #if,#else and #endif are  occured in the respective output of this two code.

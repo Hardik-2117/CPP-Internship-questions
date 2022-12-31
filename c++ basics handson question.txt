@@ -1,0 +1,55 @@
+1- program to print string:-
+
+#include <iostream>
+
+using namespace std;
+
+int main()
+{
+    cout<<"Welcome to Wipro";
+
+    return 0;
+}
+
+---------------------------------------------------------------------------------
+2 - program to take 3 integer value and print them:-
+
+#include <iostream>
+
+using namespace std;
+
+void main()
+{
+ 	 int n1,n2,n3;
+ 	cin>>n1;
+	cin>>n2;
+	cin>>n3;
+	cout<<n1;
+	cout<<n2;
+	cout<<n3;
+	return 0;
+}
+--------------------------------------------------------------------------------
+3- program to print 5 float values on screen:-
+
+
+#include <iostream>
+
+using namespace std;
+
+int main()
+{
+  float n1,n2,n3,n4,n5;
+cin>>n1;
+cin>>n2;
+cin>>n3;
+cin>>n4;
+cin>>n5;
+
+cout<<n1<<endl;
+cout<<n2<<endl;
+cout<<n3<<endl;
+cout<<n4<<endl;
+cout<<n5<<endl;
+return 0;
+}
